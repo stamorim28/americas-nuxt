@@ -1,1 +1,1 @@
-# artilheiros-nuxt
+# americas-nuxt
