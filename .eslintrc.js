@@ -13,6 +13,9 @@ module.exports = {
   // add your custom rules here
   rules: {
     'no-console': 'off',
-    'vue/no-v-html': 'off'
+    'vue/no-v-html': 'off',
+    "vue/multi-word-component-names": ["error", {
+      "ignores": ['index', 'americas', 'Header', 'Footer']
+    }]
   },
 }
