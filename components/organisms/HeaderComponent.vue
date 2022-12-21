@@ -1,6 +1,6 @@
 <template>
   <header class="flex justify-center items-center">
-    <h1 class="text-6xl font-bold text-center font-mono">
+    <h1 class="text-6xl font-bold text-center font-mono my-8">
       {{title}}
     </h1>
   </header>
