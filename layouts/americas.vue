@@ -1,5 +1,6 @@
 <template>
   <div>
+    <GithubLogo/>
     <HeaderComponent title="Americas"/>
     <ContainerComponent>
       <Nuxt/>
