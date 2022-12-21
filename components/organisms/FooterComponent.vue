@@ -1,10 +1,10 @@
 <template>
   <ContainerComponent>
-    <footer class="flex justify-center items-center">
-      <h1 class="text-3xl font-bold text-center">
-        Boa noite
-      </h1>
-    </footer>
+    <!-- <footer class="flex justify-center items-center">
+      <p class="font-bold text-center">
+        Footer
+      </p>
+    </footer> -->
 </ContainerComponent>
 </template>
 
