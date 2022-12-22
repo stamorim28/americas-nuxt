@@ -1,11 +1,11 @@
 <template>
-  <div class="grid gap-4">
-      <NuxtLink class="countries-card" to="`/book/id`">
-        <img src="https://flagcdn.com/w320/tf.png" alt="Territory of the French Southern and Antarctic Lands" loading="lazy"/>
+  <div class="grid my-4">
+      <NuxtLink class="countries-card" :to="`/alpha/${country.ccn3}`">
+        <div class="aspect-[1.5]">
+          <img class="w-full h-full" :src="country.flags.png" :alt="country.name.common" loading="lazy"/>
+        </div>
         <div>
-          <h4 v-if="country.length<20" class="mt-2 font-bold" >{{country}}</h4>
-          <h4 v-if="country.length>=20" class="mt-2 font-bold" >{{country.substring(0,20)+"..."}}</h4>
-          <!-- <h4 class="mt-2 font-bold text-center">Argentine Republic</h4> -->
+          <h4 class="mt-2 font-bold text-center">{{ country.name.common }}</h4>
         </div>
       </NuxtLink>
   </div>
@@ -13,22 +13,22 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue, { PropOptions } from 'vue'
+import { Country } from '@/types'
 
 export default Vue.extend({
   name: 'CountriesCard',
-
-  data () : {country :string} {
-    return {
-      country: 'Territory of the French Southern and Antarctic Lands'
-    }
+  props: {
+    country: {
+      type: Object,
+      required: true,
+    } as PropOptions<Country>,
   },
 })
 </script>
 <style lang="scss" scoped>
 .countries-card {
   img {
-    width: 100%;
     box-shadow: 0px 4px 11px 4px rgba(0, 0, 0, 0.13);
     transition: all 300ms ease;
     &:hover {
