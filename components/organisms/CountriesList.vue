@@ -1,15 +1,20 @@
 <template>
-  <div class="countries-list grid grid-cols-5 grid-rows-auto gap-5">
-    <!-- <CountriesCard v-for="country in $countries" :key="country.id" :country ="country " /> -->
-    <CountriesCard />
+  <div class="countries-list grid grid-cols-6 grid-rows-auto gap-8">
+    <CountriesCard v-for="(country, idx) in $countries" :key="idx" :country ="country" />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import { countries } from '@/store'
 
 export default Vue.extend({
   name: 'CountriesList',
+  computed: {
+    $countries() {
+      return countries.$all
+    },
+  },
 })
 </script>
 
