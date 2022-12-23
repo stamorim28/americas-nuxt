@@ -1,10 +1,7 @@
 <template>
   <ContainerComponent>
-    <!-- <footer class="flex justify-center items-center">
-      <p class="font-bold text-center">
-        Footer
-      </p>
-    </footer> -->
+    <footer class="my-8">
+    </footer>
 </ContainerComponent>
 </template>
 
