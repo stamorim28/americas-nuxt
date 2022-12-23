@@ -35,15 +35,22 @@ export default class Countries extends VuexModule {
 
   @Action
   public async index() {
-    const countries = await $axios.$get('/region/americas')
-    console.log(countries)
-    this.context.commit('SET_ALL', countries)
+    try {
+      const countries = await $axios.$get('/region/americas')
+      this.context.commit('SET_ALL', countries)
+    } catch (error) {
+      alert(error)
+    }
   }
 
   @Action
   public async show({ ccn3 }: Show) {
-    const country = await $axios.$get(`/alpha/${ccn3}`)
-    this.context.commit('SET_SINGLE', country)
+    try {
+      const country = await $axios.$get(`/alpha/${ccn3}`)
+      this.context.commit('SET_SINGLE', country)
+    } catch (error) {
+      alert(error)
+    }
   }
 
 }
