@@ -11,24 +11,24 @@ export default Vue.extend({
   async asyncData({ params }){
     await countries.show({ ccn3: params.ccn3 as any })
   },
-  head() {
-    return {
-      title: this.$country.name.common,
-      meta: [
-        {
-          hid: 'description',
-          name: this.$country.name.common,
-          content: this.$country.name.common
-        }
-        // DESCRIÇÃO DAS METATAGS
-      ]
-    }
-  },
+  // head() {
+  //   return {
+  //     title: countries.$single.name.common,
+  //     meta: [
+  //       {
+  //         hid: 'description',
+  //         name: countries.$single.name.common,
+  //         content: countries.$single.name.common
+  //       }
+  //       // DESCRIÇÃO DAS METATAGS
+  //     ]
+  //   }
+  // },
   computed: {
     $country() {
-      const country = countries.$single
+      const country : any = countries.$single
 
-      const parsed : Object = {};
+      const parsed : any = {};
 
       country.forEach(function (item: any) {
 	      for (const i in item) {
