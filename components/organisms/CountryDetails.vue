@@ -31,7 +31,7 @@
 
 <script lang="ts">
 import Vue, { PropOptions } from 'vue'
-import { Country} from '@/types'
+import { Country } from '@/types'
 
 export default Vue.extend({
   name: 'CountriesDetails',
