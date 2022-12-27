@@ -1,6 +1,6 @@
 <template>
   <div>
-    <GithubLogo/>
+    <DarkTheme/>
     <HeaderComponent title="Americas"/>
     <ContainerComponent>
       <Nuxt/>
@@ -11,7 +11,6 @@
 
 <script lang="ts">
 import Vue from 'vue'
-
 export default Vue.extend({
   name: 'americas',
 })

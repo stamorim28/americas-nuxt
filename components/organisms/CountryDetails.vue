@@ -1,7 +1,7 @@
 <template>
   <section class="w-full">
     <div class="countries-details grid justify-items-center">
-      <img class="w-full md:w-3/6" :src="country.flags.svg" :alt="country.name.common" loading="lazy">
+      <nuxt-img class="w-full md:w-3/6" :src="country.flags.svg" :alt="country.name.common" loading="lazy" placeholder/>
       <h2 class="text-2xl font-bold mt-4"> {{ country.name.official }}</h2>
       <h4>{{ country.name.common }}</h4>
     </div>
@@ -24,14 +24,14 @@
 
     <div v-if="country.coatOfArms.png">
       <h4 class="text-2xl font-bold">Coat of Arms:</h4> <br/>
-      <img class="w-full md:w-1/4" :src="country.coatOfArms.png" :alt="`Coat of Arms: ${country.name.common}`" loading="lazy">
+      <nuxt-img class="w-full md:w-1/4" :src="country.coatOfArms.png" :alt="`Coat of Arms: ${country.name.common}`" loading="lazy" placeholder/>
     </div>
   </section>
 </template>
 
 <script lang="ts">
 import Vue, { PropOptions } from 'vue'
-import { Country} from '@/types'
+import { Country } from '@/types'
 
 export default Vue.extend({
   name: 'CountriesDetails',

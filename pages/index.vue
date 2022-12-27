@@ -19,3 +19,8 @@ export default Vue.extend({
   },
 })
 </script>
+<style lang="scss">
+  body {
+    @apply dark:bg-slate-800 dark:text-white
+  }
+</style>
