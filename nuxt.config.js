@@ -47,7 +47,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios', '@nuxtjs/style-resources'
+    '@nuxtjs/axios', '@nuxtjs/style-resources', '@nuxt/image'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -64,11 +64,11 @@ export default {
         autoprefixer: {},
       },
     },
-    extend (config : any) : void {
+    extend (config){
       config.module.rules.push({
         test: /\.mjs$/,
         include: /node_modules/,
-        type: "typescript/auto"
+        type: "javascript/auto"
       })
     },
     extractCSS: true
