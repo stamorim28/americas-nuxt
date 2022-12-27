@@ -64,11 +64,11 @@ export default {
         autoprefixer: {},
       },
     },
-    extend (config) {
+    extend (config : any) : void {
       config.module.rules.push({
         test: /\.mjs$/,
         include: /node_modules/,
-        type: "javascript/auto"
+        type: "typescript/auto"
       })
     },
     extractCSS: true
