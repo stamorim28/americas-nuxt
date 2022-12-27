@@ -64,7 +64,7 @@ export default {
         autoprefixer: {},
       },
     },
-    extend (config :any) {
+    extend (config) {
       config.module.rules.push({
         test: /\.mjs$/,
         include: /node_modules/,
