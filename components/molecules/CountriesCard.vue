@@ -2,7 +2,7 @@
   <div class="grid my-4">
       <NuxtLink class="countries-card" :to="`/alpha/${country.ccn3}`">
         <div class="aspect-[1.5]">
-          <img class="w-full h-full" :src="country.flags.png" :alt="country.name.common" loading="lazy"/>
+          <nuxt-img class="w-full h-full" :src="country.flags.png" :alt="country.name.common" loading="lazy" placeholder/>
         </div>
         <div>
           <h4 class="mt-2 font-bold text-center">{{ country.name.common }}</h4>
