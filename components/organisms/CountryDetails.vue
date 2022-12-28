@@ -7,17 +7,14 @@
     </div>
 
     <div class="my-4">
-      <p v-if="country.languages.spa">Languages: {{ country.languages.spa }}</p>
-      <p v-if="country.languages.eng">Languages: {{ country.languages.eng }}</p>
-      <p v-if="country.languages.por">Languages: {{ country.languages.por }}</p>
-      <p v-if="country.languages.fra">Languages: {{ country.languages.fra }}</p>
-      <p v-if="country.languages.nld">Languages: {{ country.languages.nld }}</p>
-      <p v-if="country.languages.kal">Languages: {{ country.languages.kal }}</p>
+      <p>Languages:
+        <span v-for="(lang, idx) in getLanguages" :key="idx">{{ lang }}, </span>
+      </p>
       <p>Subregion: {{ country.subregion }}</p>
-      <p>Population: {{ country.population }}</p>
+      <p>Population: {{ getPopulation }} million</p>
       <p>Timezones:
         <span v-for="(timezones, idx) in country.timezones" :key="idx">
-          {{ timezones }} |
+          {{ timezones }}
         </span>
       </p>
     </div>
@@ -41,6 +38,32 @@ export default Vue.extend({
       required: true,
     } as PropOptions<Country>,
   },
+
+  head() : Object {
+    return {
+      title: this.country.name.common,
+      meta: [
+        {
+          hid: 'description',
+          name: this.country.name.common,
+          content: this.country.name.official
+        }
+        // DESCRIÇÃO DAS METATAGS
+      ]
+    }
+  },
+
+  computed: {
+    getPopulation() : string {
+      const population : string = JSON.stringify(this.country.population / 1000000)
+      return population.substring(0, 5)
+    },
+
+    getLanguages() : object {
+      const languages : object = this.country.languages
+      return Object.values(languages)
+    }
+  }
 })
 </script>
 <style lang="scss" scoped>
