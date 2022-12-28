@@ -8,12 +8,25 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'Aplicação feita por Stênio Amorim. Github: /stamorim28.' },
       { name: 'format-detection', content: 'telephone=no' },
+      { name: 'keywords', content: 'typescript, vue, scss, tailwind, axios, nuxt, restcountries, api' },
+      { itemprop:'name', content:'Americas' },
+      { itemprop:'description', content:'Aplicação feita por Stênio Amorim. Github: /stamorim28.' },
+      { itemprop:'image', content:'https://avatars.githubusercontent.com/u/61470896?v=4' },
+      { property: 'og:type', content: 'website'},
+      { property: 'og:image', content:'https://avatars.githubusercontent.com/u/61470896?v=4'},
+      { property: 'og:url', content: 'https://americas-nuxt.vercel.app/'},
+      { property: 'og:title', content: 'Americas'},
+      { property: 'og:description', content: 'Aplicação feita por Stênio Amorim. Github: /stamorim28.'},
+      { property: 'twitter:card', content: 'summary_large_image'},
+      { property: 'twitter:image', content: 'https://avatars.githubusercontent.com/u/61470896?v=4'},
+      { property: 'twitter:url', content: 'https://americas-nuxt.vercel.app/'},
+      { property: 'twitter:title', content: 'Americas'},
+      { property: 'twitter:description', content: 'Aplicação feita por Stênio Amorim. Github: /stamorim28.'},
     ],
-
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/png', href: '/globe.png' },
       {
         rel: "stylesheet",
         href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
