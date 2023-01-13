@@ -14,7 +14,7 @@ A exibição conta com bandeiras e nome dos países, ao clicar no país referent
 <img width="650" src="https://raw.githubusercontent.com/stamorim28/nuxt-americas/master/pictures/print_1.png" alt="print"/>
 
 
-## Tecnologias
+## Tecnologias e Metodologias
 
 - [Nuxt (SSR)](https://nuxtjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
@@ -23,6 +23,7 @@ A exibição conta com bandeiras e nome dos países, ao clicar no país referent
 - [vueuse](https://vueuse.org/)
 - [Vuex](https://vuex.vuejs.org/)
 - [Axios](https://axios-http.com/ptbr/)
+- [Atomic Design](https://atomicdesign.bradfrost.com/chapter-2/)
 
 
 ## Setup
