@@ -22,6 +22,7 @@ A exibição conta com bandeiras e nome dos países, ao clicar no país referent
 - [Tailwind](https://tailwindcss.com/)
 - [vueuse](https://vueuse.org/)
 - [Vuex](https://vuex.vuejs.org/)
+- [Axios](https://axios-http.com/ptbr/)
 
 
 ## Setup
