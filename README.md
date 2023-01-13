@@ -11,7 +11,7 @@ A exibição conta com bandeiras e nome dos países, ao clicar no país referent
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+<img width="650" src="https://raw.githubusercontent.com/stamorim28/nuxt-americas/master/pictures/print_1.png" alt="print"/>
 
 
 ## Tecnologias
