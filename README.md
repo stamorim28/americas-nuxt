@@ -1,7 +1,7 @@
 
 # Americas
 
-#### Listagem e informações de países do continente americano.
+#### Listagem e informações de países do continente americano direto da [REST Countries](https://restcountries.com/).
 
 
 ## Objetivos
