@@ -6,6 +6,8 @@
 
 ## Objetivos
 
+Verificando o ambiente Nuxt + Typescript.
+
 A exibição conta com bandeiras e nome dos países, ao clicar no país referente exibe-se informações além das anteriores como de nome oficial, linguagens faladas, região de localização, quantidade populacional, horários oficiais (timezones) e brasão oficial. Também foi incluido a funcionalidade de dark e light.
 
 
