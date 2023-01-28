@@ -1,5 +1,5 @@
 <template>
-  <CountryDetails :country="$country"/>
+  <CountryDetails :country="$country" />
 </template>
 
 <script lang="ts">
@@ -9,26 +9,21 @@ import { Country } from '~/types'
 
 export default Vue.extend({
   layout: 'americas',
-  async asyncData({ params }){
-    await countries.show({ ccn3: params.ccn3 as any })
+  async asyncData({ params }) {
+    await countries.show({ ccn3: params.ccn3 as string })
   },
 
   computed: {
-    $country() : Country {
-      const country : any = countries.$single
-      const parsed : any = {};
-      country.forEach(function (item: any) : void {
-	      for (const i in item) {
-		      parsed[i] = item[i];
-	      }
-      });
-
+    $country(): Country {
+      const country: any = countries.$single
+      const parsed = {} as Country
+      country.forEach((item: Country) => {
+        Object.assign(parsed, item)
+      })
       return parsed
-    }
+    },
   },
 })
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
