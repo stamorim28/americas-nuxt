@@ -8,19 +8,17 @@
 
 <script setup lang="ts">
 import { WritableComputedRef } from 'vue'
-
 import { useDark, useToggle } from '@vueuse/core'
 
-const isDark : WritableComputedRef<boolean> = useDark()
-const handleDark : any = useToggle(isDark)
-
+const isDark: WritableComputedRef<boolean> = useDark()
+const handleDark: (value?: boolean | undefined) => boolean = useToggle(isDark)
 </script>
 
 <style lang="scss" scoped>
 .lamp {
-    position: absolute;
-    top: 2%;
-    right: 2%;
-    z-index: 2;
-  }
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  z-index: 2;
+}
 </style>
